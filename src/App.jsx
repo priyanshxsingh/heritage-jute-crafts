@@ -11,11 +11,14 @@ import {
   HandHeart,
   Instagram,
   Facebook,
+  Twitter,
+  Youtube,
   Mail,
   Phone,
   MapPin,
   CheckCircle2,
 } from "lucide-react";
+import { SiPinterest } from "react-icons/si";
 
 import heroImage from "./assets/heroImage.avif";
 import heroImage1 from "./assets/heroImage1.avif";
@@ -295,21 +298,23 @@ export default function App() {
             <div className="max-w-3xl">
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs tracking-wide text-white backdrop-blur-sm">
                 <Leaf size={14} />
-                Rooted in nature, made for life
+                Rooted in tradition, shaped by skilled hands
               </div>
 
               <h1 className="font-serif text-5xl leading-[1.1] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-                A timeless craft.
+                Woven by hand.
                 <br />
-                <span className="italic text-[#e4d2a3]">A natural</span>
+                <span className="italic text-[#e4d2a3]">Inspired by</span>
                 <br />
-                way of living.
+                nature.
               </h1>
 
               <p className="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-                Discover the beauty of jute through thoughtful bags, lifestyle
-                essentials, and handcrafted creations inspired by nature and
-                tradition.
+                Behind every jute creation is the skill of artisans who
+                transform a humble natural fibre into something beautiful and
+                purposeful. Through traditional craftsmanship and thoughtful
+                design, we celebrate the people, textures, and heritage woven
+                into every piece.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-4">
@@ -319,26 +324,29 @@ export default function App() {
                 >
                   Explore Collections <ArrowRight size={17} />
                 </a>
+
                 <a
                   href="#story"
                   className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-4 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
-                  Discover Our Story
+                  Meet Our Story
                 </a>
               </div>
 
               <div className="mt-14 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/25 pt-6 text-xs text-white/80 sm:gap-x-12">
                 <span className="flex items-center gap-2">
                   <Leaf size={15} className="text-[#e4d2a3]" />
-                  Natural fibre
+                  Natural jute fibre
                 </span>
+
                 <span className="flex items-center gap-2">
                   <Heart size={15} className="text-[#e4d2a3]" />
-                  Crafted with care
+                  Artisan craftsmanship
                 </span>
+
                 <span className="flex items-center gap-2">
                   <Recycle size={15} className="text-[#e4d2a3]" />
-                  Reusable designs
+                  Thoughtful design
                 </span>
               </div>
             </div>
@@ -346,80 +354,6 @@ export default function App() {
 
           <div className="absolute bottom-8 right-8 hidden text-xs tracking-[0.2em] text-white/70 [writing-mode:vertical-rl] md:block">
             CRAFTED WITH NATURE IN MIND
-          </div>
-        </section>
-
-        {/* Intro strip */}
-        <section className="border-b border-[#e7e0d2] bg-[#f0eadc]">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 py-8 sm:grid-cols-4 sm:px-10 lg:px-16">
-            {[
-              ["Natural", "Fibre inspiration"],
-              ["Timeless", "Design language"],
-              ["Versatile", "Everyday essentials"],
-              ["Thoughtful", "Gift ideas"],
-            ].map(([title, subtitle]) => (
-              <div key={title} className="text-center">
-                <p className="font-serif text-xl sm:text-2xl">{title}</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-[#77776a] sm:text-xs">
-                  {subtitle}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Story */}
-        <section
-          id="story"
-          className="scroll-mt-24 px-6 py-12 sm:px-10 sm:py-16 lg:px-16"
-        >
-          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <div className="relative">
-              <img
-                src={heroImage1}
-                alt="Creative materials and hands-on craft work"
-                className="h-[390px] w-full rounded-sm object-cover sm:h-[520px]"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-5 -right-3 max-w-[230px] bg-[#e8dfc9] p-5 sm:-right-6 sm:p-7">
-                <p className="font-serif text-2xl italic text-[#344c35]">
-                  Nature in every thread.
-                </p>
-                <p className="mt-2 text-xs leading-5 text-[#686b5d]">
-                  A celebration of simple materials and thoughtful living.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-4 lg:pt-0">
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#7b8750]">
-                The story behind the craft
-              </p>
-              <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
-                Inspired by nature.
-                <br />
-                <span className="italic text-[#7b8750]">Made to be loved.</span>
-              </h2>
-              <p className="mt-7 text-sm leading-8 text-[#6f7167] sm:text-base">
-                At Heritage Jute Craft, we believe everyday objects can be
-                beautiful, useful, and more mindful. Our inspiration comes from
-                the character of jute: its earthy texture, natural warmth, and
-                remarkable versatility.
-              </p>
-              <p className="mt-4 text-sm leading-8 text-[#6f7167] sm:text-base">
-                From carry bags to thoughtful gifts, our collection celebrates a
-                material with a long tradition and a place in contemporary
-                living. We bring together simple design ideas and a love for
-                natural textures.
-              </p>
-
-              <a
-                href="#craft"
-                className="mt-8 inline-flex items-center gap-3 border-b border-[#344c35] pb-2 text-sm font-semibold transition hover:gap-5"
-              >
-                Discover our approach <ArrowRight size={17} />
-              </a>
-            </div>
           </div>
         </section>
 
@@ -626,6 +560,61 @@ export default function App() {
           </div>
         </section>
 
+        {/* Story */}
+        <section
+          id="story"
+          className="scroll-mt-24 px-6 py-12 sm:px-10 sm:py-16 lg:px-16"
+        >
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <div className="relative">
+              <img
+                src={heroImage1}
+                alt="Creative materials and hands-on craft work"
+                className="h-[390px] w-full rounded-sm object-cover sm:h-[520px]"
+                loading="lazy"
+              />
+              <div className="absolute -bottom-5 -right-3 max-w-[230px] bg-[#e8dfc9] p-5 sm:-right-6 sm:p-7">
+                <p className="font-serif text-2xl italic text-[#344c35]">
+                  Nature in every thread.
+                </p>
+                <p className="mt-2 text-xs leading-5 text-[#686b5d]">
+                  A celebration of simple materials and thoughtful living.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-4 lg:pt-0">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#7b8750]">
+                The story behind the craft
+              </p>
+              <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+                Inspired by nature.
+                <br />
+                <span className="italic text-[#7b8750]">Made to be loved.</span>
+              </h2>
+              <p className="mt-7 text-sm leading-8 text-[#6f7167] sm:text-base">
+                At Heritage Jute Craft, we believe everyday objects can be
+                beautiful, useful, and more mindful. Our inspiration comes from
+                the character of jute: its earthy texture, natural warmth, and
+                remarkable versatility.
+              </p>
+              <p className="mt-4 text-sm leading-8 text-[#6f7167] sm:text-base">
+                From carry bags to thoughtful gifts, our collection celebrates a
+                material with a long tradition and a place in contemporary
+                living. We bring together simple design ideas and a love for
+                natural textures.
+              </p>
+
+              <a
+                href="#craft"
+                className="mt-8 inline-flex items-center gap-3 border-b border-[#344c35] pb-2 text-sm font-semibold transition hover:gap-5"
+              >
+                Discover our approach <ArrowRight size={17} />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Craft video */}
         <section
           id="craft"
@@ -654,14 +643,15 @@ export default function App() {
             </div>
 
             <p className="mx-auto mt-5 max-w-3xl text-center text-xs leading-6 text-white/60">
-              Video provided for this website. If it does not play, check the
-              video's embedding permissions on YouTube.
+              Discover the hands, traditions, and natural fibres behind every
+              creation — a celebration of craftsmanship rooted in nature.
             </p>
           </div>
         </section>
 
         {/* Values */}
-        <section className="px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
+
+        <section className="px-6 py-10 sm:px-10 sm:py-12 lg:px-16">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="What we believe"
@@ -669,19 +659,30 @@ export default function App() {
               description="Good design is about more than appearance. It is about the materials we choose, the way we use things, and the stories they carry."
             />
 
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14">
+            <div className="mt-8">
               {values.map(({ icon: Icon, title, description }, index) => (
-                <div key={title} className="border-t border-[#dcd5c6] pt-7">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-[#e9e3d3] text-[#526744]">
-                    <Icon size={25} strokeWidth={1.5} />
+                <div
+                  key={title}
+                  className="flex gap-4 border-t border-[#dcd5c6] py-5 sm:gap-6 sm:py-6"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e9e3d3] text-[#526744] sm:h-12 sm:w-12">
+                    <Icon size={22} strokeWidth={1.5} />
                   </div>
-                  <p className="mb-3 text-xs tracking-[0.18em] text-[#8a8b7b]">
-                    0{index + 1}
-                  </p>
-                  <h3 className="font-serif text-2xl">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-[#77776a]">
-                    {description}
-                  </p>
+
+                  <div className="flex-1 sm:flex sm:items-start sm:gap-8">
+                    <div className="sm:w-1/3 sm:shrink-0">
+                      <p className="mb-1 text-[10px] tracking-[0.18em] text-[#8a8b7b]">
+                        0{index + 1}
+                      </p>
+                      <h3 className="font-serif text-xl sm:text-2xl">
+                        {title}
+                      </h3>
+                    </div>
+
+                    <p className="mt-2 text-sm leading-6 text-[#77776a] sm:mt-0 sm:flex-1 sm:pt-3">
+                      {description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -694,13 +695,15 @@ export default function App() {
           <div className="pointer-events-none absolute -right-2 -top-16 h-56 w-56 rounded-full border border-[#c6b99a]/60 sm:h-80 sm:w-80" />
           <div className="relative mx-auto max-w-4xl text-center">
             <Leaf className="mx-auto mb-6 text-[#788553]" size={30} />
+
             <p className="font-serif text-3xl leading-snug text-[#344c35] sm:text-4xl md:text-5xl">
-              “Bring home less noise,
+              Crafted by hand,
               <br />
-              <span className="italic">and more nature.”</span>
+              <span className="italic">inspired by the earth.</span>
             </p>
+
             <p className="mt-6 text-xs uppercase tracking-[0.22em] text-[#76745f]">
-              The Heritage Jute Craft philosophy
+              The Heritage Jute Crafts philosophy
             </p>
           </div>
         </section>
@@ -715,11 +718,13 @@ export default function App() {
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#7b8750]">
                 Let's connect
               </p>
-              <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
-                Have an idea
-                <br />
-                <span className="italic text-[#7b8750]">in mind?</span>
-              </h2>
+              
+<h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+  Ready to
+  <br />
+  <span className="italic text-[#7b8750]">place an order?</span>
+</h2>
+
               <p className="mt-6 max-w-md text-sm leading-8 text-[#77776a]">
                 Looking for a particular product, corporate gifts, event
                 merchandise, or a custom jute creation? Tell us what you have in
@@ -884,10 +889,20 @@ export default function App() {
                   </p>
                 </div>
               </a>
+
               <p className="mt-5 max-w-sm text-sm leading-7 text-white/60">
                 Celebrating natural materials, thoughtful design, and the
                 timeless character of jute.
               </p>
+
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5">
+                <span className="text-base" aria-hidden="true">
+                  🇮🇳
+                </span>
+                <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#e4d2a3]">
+                  Made in India
+                </span>
+              </div>
             </div>
 
             <div>
@@ -925,37 +940,77 @@ export default function App() {
               >
                 Start a conversation <ArrowRight size={15} />
               </a>
-              <div className="mt-5 flex gap-3">
+
+              <div className="mt-5 flex flex-wrap gap-3">
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10 hover:text-[#e4d2a3]"
                 >
                   <Instagram size={17} />
                 </a>
+
                 <a
                   href="https://www.facebook.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10 hover:text-[#e4d2a3]"
                 >
                   <Facebook size={17} />
+                </a>
+
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="X (Twitter)"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10 hover:text-[#e4d2a3]"
+                >
+                  <Twitter size={17} />
+                </a>
+
+                <a
+                  href="https://www.pinterest.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Pinterest"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10 hover:text-[#e4d2a3]"
+                >
+                  <SiPinterest size={17} />
+                </a>
+
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10 hover:text-[#e4d2a3]"
+                >
+                  <Youtube size={17} />
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-3 pt-6 text-[11px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 border-t border-white/10 pt-6 text-[11px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {new Date().getFullYear()} Heritage Jute Craft. All rights
               reserved.
             </p>
-            <a href="#home" className="transition hover:text-white">
-              Back to top ↑
-            </a>
+
+            <div className="flex flex-wrap items-center gap-5">
+              <span className="inline-flex items-center gap-2 text-white/65">
+                <span aria-hidden="true">🇮🇳</span>
+                Made in India
+              </span>
+
+              <a href="#home" className="transition hover:text-white">
+                Back to top ↑
+              </a>
+            </div>
           </div>
         </div>
       </footer>
